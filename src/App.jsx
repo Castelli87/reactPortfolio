@@ -1,4 +1,8 @@
-
+import Header from './components/Header';
+import Home from './components/Home'
+import AboutMe from './components/AboutMe'
+import Projects from './components/Projects'
+import Concacts from './components/Concact'
 import './App.css'
 
 function App() {
@@ -6,7 +10,11 @@ function App() {
 
   return (
     <main>
-      <h1>Starting Point</h1>
+      <Header/>
+      <Home/>
+      <AboutMe/>
+      <Projects/>
+      <Concacts/>
     </main>
       
   )
