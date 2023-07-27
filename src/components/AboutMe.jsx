@@ -1,7 +1,7 @@
 const AboutMe =()=>{
     return (
         <>
-           <h1 className="text-3xl font-bold underline">About Me !!!</h1> 
+           <h1 className="text-3xl font-bold underline"></h1> 
 
         </>
     )
