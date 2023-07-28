@@ -6,5 +6,5 @@
 }
 
 .mobile-nav {
-  @apply block md:hidden fixed top-20 my-10 py-2 m-8 duration-500;
+  @apply block md:hidden fixed top-20 mx-8 py-2 m-8 duration-500;
 } 
