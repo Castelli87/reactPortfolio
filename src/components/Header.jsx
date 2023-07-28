@@ -15,7 +15,7 @@ const Header = () => {
       <nav className="hidden md:block " >
         <ul className=" flex">
           <li>
-            <a href="/#AboutMe" className="p-2 m-2 text-gray-600 text-lg text-lg font-semibold	font-sans hover:text-black hover:underline ">About</a>
+            <a href="/#About" className="p-2 m-2 text-gray-600 text-lg text-lg font-semibold	font-sans hover:text-black hover:underline ">About</a>
           </li>
           <li>
             <a href="/#Projects" className="p-2 m-2 text-gray-600 text-lg font-semibold	font-sans	hover:text-black hover:underline">Projects</a>
@@ -29,7 +29,7 @@ const Header = () => {
       <nav className={!toggle ? "mobile-nav left-[-100%]" : "mobile-nav left-0"}>
         <ul className=" block ">
           <li>
-            <a href="/#AboutMe" className="p-2 m-2 text-gray-600	text-sm  font-semibold	font-sans hover:text-black hover:underline ">About</a>
+            <a href="/#About" className="p-2 m-2 text-gray-600	text-sm  font-semibold	font-sans hover:text-black hover:underline ">About</a>
           </li>
           <li>
             <a href="/#Projects" className="p-2 m-2 text-gray-600	text-sm font-semibold	font-sans hover:text-black hover:underline">Projects</a>
