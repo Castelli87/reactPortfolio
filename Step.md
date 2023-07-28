@@ -16,3 +16,9 @@ DECISIONE DA PRENDERE UTILIZZARE REACT ROUTERS ??  GUARDARE HOOK CONCTEX
 6 build the basic layout for the desktop and after the mobile but the reality should be at reverse 
 
 7 add the transiction when button is clicked and show the list  down the logo 
+
+
+
+allora inserire le imagini nei data ,
+creare la singola card
+creare i layout per le card 
