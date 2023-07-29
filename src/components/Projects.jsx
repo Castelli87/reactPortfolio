@@ -10,8 +10,8 @@ const Projects = () => {
           <div className="px-6 py-4">
             <div className=" text-center font-bold text-xl mb-2">{item.title}</div>
             <img  className="h-28 mx-auto " src={item.img}></img>
-            <p className="text-gray-700 text-left mt-3" > Category: {item.category}</p>
-            <p className="text-gray-700 text-left ">{item.type}</p>
+            <p className="text-gray-700 text-left mt-3" > - {item.category}</p>
+            <p className="text-gray-700 text-left "> - {item.type}</p>
             <div className="flex justify-end	">
             <button class=" bg-blue-500 mt-5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" ><a>More Info</a></button>
 
