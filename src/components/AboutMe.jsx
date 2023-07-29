@@ -1,6 +1,7 @@
 const AboutMe = () => {
   return (
     <section className="container mx-auto" id='About' >
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <h1 className="text-3xl font-bold underline text-left">About</h1>
       <p className="text-sm text-left mt-2">Hello! I'm Davide, </p>
       <p className="text-sm text-left tracking-tight font-serif mt-2">
@@ -48,6 +49,7 @@ const AboutMe = () => {
 
         </button>
       </div>
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
     </section>
   );
 };
