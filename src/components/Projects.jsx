@@ -3,7 +3,7 @@ import projects from "../assets/data/data";
 
 const Projects = () => {
   return (
-    <section className=" container  grid mt-10 md:grid-cols-2 lg:grid-cols-3 gap-10" >
+    <section className=" container  grid mt-10 md:grid-cols-2 lg:grid-cols-3 gap-10"id='Projects'>
     
       {projects.map((item) => (
         <div className="max-w-sm m-8 rounded overflow-hidden shadow-lg">
