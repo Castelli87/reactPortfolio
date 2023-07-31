@@ -4,6 +4,7 @@ import AboutMe from './components/AboutMe'
 import Projects from './components/Projects'
 import Concacts from './components/Concact'
 import './App.css'
+import Footer from './components/Footer';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <AboutMe/>
       <Projects/>
       <Concacts/>
+      <Footer/>
     </main>
       
   )
