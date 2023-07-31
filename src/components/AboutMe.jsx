@@ -4,9 +4,9 @@ const AboutMe = () => {
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <div className="grid lg:grid-cols-2 items-center ">
         <div>
-          <h1 className="text-3xl font-bold underline text-left">About</h1>
-          <p className="text-sm text-left mt-2">Hello! I'm Davide, </p>
-          <p className="text-sm text-left tracking-tight font-serif mt-2">
+          <h1 className="text-3xl font-bold  text-center">About</h1>
+          <p className="text-sm text-left tracking-tight font-serif mt-2">Hello! I'm Davide, </p>
+          <p className="text-sm text-left tracking-tight font-serif ">
             a junior full stack developer with a passion for building dynamic
             and user-centric applications.
           </p>
