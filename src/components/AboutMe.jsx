@@ -1,7 +1,7 @@
 const AboutMe = () => {
   return (
     <section className="container mx-auto" id="About">
-      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <div className="grid lg:grid-cols-2 items-center ">
         <div>
           <h1 className="text-3xl font-bold underline text-left">About</h1>
@@ -36,7 +36,7 @@ const AboutMe = () => {
             real-world scenarios.
           </p>
           <div className="flex my-3">
-            <button class="text-left bg-blue-500  hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+            <button className="text-left bg-blue-500  hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
               <a href="/#Projects">Projects</a>
             </button>
           </div>
@@ -50,11 +50,11 @@ const AboutMe = () => {
           information provided below. I'm excited to connect with like-minded
           individuals and collaborate on exciting projects.
         </p>
-        <button class="flex my-3 md:m-3 md:text-left bg-blue-500  hover:bg-blue-700 text-white font-bold py-1 px-4 rounded ">
+        <button className="flex my-3 md:m-3 md:text-left bg-blue-500  hover:bg-blue-700 text-white font-bold py-1 px-4 rounded ">
           <a href="/">Contact</a>
         </button>
       </div>
-      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
     </section>
   );
 };
