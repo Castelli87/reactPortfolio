@@ -29,13 +29,13 @@ const Header = () => {
       <nav className={!toggle ? "mobile-nav left-[-100%]" : "mobile-nav left-0"}>
         <ul className=" block ">
           <li>
-            <a href="/#About" className="p-2 m-2 text-gray-600	text-sm  font-semibold	font-sans hover:text-black hover:underline ">About</a>
+            <a onClick={handleToggle} href="/#About" className="p-2 m-2 text-gray-600	text-sm  font-semibold	font-sans hover:text-black hover:underline ">About</a>
           </li>
           <li>
-            <a href="/#Projects" className="p-2 m-2 text-gray-600	text-sm font-semibold	font-sans hover:text-black hover:underline">Projects</a>
+            <a onClick={handleToggle}  href="/#Projects" className="p-2 m-2 text-gray-600	text-sm font-semibold	font-sans hover:text-black hover:underline">Projects</a>
           </li>
           <li>
-            <a href="/#Contact" className="p-2 m-2 text-gray-600	text-sm font-semibold	font-sans hover:text-black hover:underline">Contact</a>
+            <a onClick={handleToggle}  href="/#Contact" className="p-2 m-2 text-gray-600	text-sm font-semibold	font-sans hover:text-black hover:underline">Contact</a>
           </li>
         </ul>
       </nav>

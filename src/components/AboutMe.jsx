@@ -51,7 +51,7 @@ const AboutMe = () => {
           individuals and collaborate on exciting projects.
         </p>
         <button className="flex my-3 md:m-3 md:text-left bg-blue-500  hover:bg-blue-700 text-white font-bold py-1 px-4 rounded ">
-          <a href="/">Contact</a>
+          <a href="/#Contact">Contact</a>
         </button>
       </div>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
