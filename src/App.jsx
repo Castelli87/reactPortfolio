@@ -5,13 +5,15 @@ import Projects from './components/Projects'
 import Concacts from './components/Concact'
 import './App.css'
 import Footer from './components/Footer';
+import { useState } from 'react';
 
 function App() {
 
+  const [theme, setTheme] = useState('light');
 
   return (
-    <main>
-      <Header/>
+    <main className='p-6 dark:bg-slate-800 dark:text-white' >
+      <Header theme={theme} setTheme={setTheme}/>
       <Home/>
       <AboutMe/>
       <Projects/>
