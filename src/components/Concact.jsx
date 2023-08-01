@@ -29,14 +29,14 @@ const handleSubmit=(event)=>{
     
     <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" ></hr>
     <section className="container grid md:grid-cols-2 gap-10  " id="Contact">
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form  " onSubmit={handleSubmit} >
         <h2 className="font-general-medium text-2xl  mt-12 mb-8">
           Contact Form
         </h2>
         <div className="mb-6">
           <label
             htmlFor="fullname"
-            className="block mb-2 text-sm text-left font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-sm text-left font-medium text-gray-900 dark:text-white dark:bg-slate-800 "
           >
             Full name
           </label>
@@ -54,14 +54,14 @@ const handleSubmit=(event)=>{
         <div className="mb-6">
           <label
             htmlFor="email"
-            className="block mb-2 text-sm text-left font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-sm text-left font-medium text-gray-900 dark:text-white "
           >
             Your email
           </label>
           <input
             type="email"
             id="email"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-200 focus:border-blue-200 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-200 focus:border-blue-200 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             name="email"
             value={inputValues.email}
             onChange={handleChange}
@@ -97,7 +97,7 @@ const handleSubmit=(event)=>{
           <textarea
             id="message"
             rows="4"
-            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Please leave your message here.... "
             onChange={handleChange}
             name="message"
