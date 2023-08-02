@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { FiMoon, FiSun } from 'react-icons/fi';
-import logoLight from '../assets/Images/logo1.svg'
+import logoLight from '../assets/Images/Logo1.svg'
 
 
 const Header = ({theme,setTheme}) => {
