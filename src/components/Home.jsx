@@ -1,3 +1,5 @@
+import dev from '../assets/Images/web-design-layout.svg'
+
 const Home=()=>{
     return (
         <main className="container mx-auto px-5 grid md:grid-cols-2 items-center justify-center md:justify-between " >
@@ -8,7 +10,7 @@ const Home=()=>{
                 <button className="bg-blue-500 m-7 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" ><a href="/#About">About Me</a></button>
             </section>
             <section>
-                <img className="w-96"src="../src/assets/Images/web-design-layout.svg" alt="" />
+                <img className="w-96"src={dev} alt="" />
             </section>
         </main>
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { FiMoon, FiSun } from 'react-icons/fi';
 import logoLight from '../assets/Images/Logo1.svg'
+import logoDark from '../assets/Images/Logo2.svg'
 
 
 const Header = ({theme,setTheme}) => {
@@ -19,7 +20,7 @@ const Header = ({theme,setTheme}) => {
   return (
     <header className="flex justify-between  p-4 ">
       <a href="/" className="">
-        {theme === 'dark'?(<img className="w-16" src = {logoLight }alt="" />):(<img className="w-16" src={logoLight} alt="" />)}
+        {theme === 'dark'?(<img className="w-16" src = {logoDark }alt="" />):(<img className="w-16" src={logoLight} alt="" />)}
 
       </a>
       <nav className="hidden md:block " >

@@ -1,3 +1,7 @@
+import me from '../assets/Images/personal1.jpg'
+
+
+
 const AboutMe = () => {
   return (
     <section className="container mx-auto " id="About">
@@ -41,7 +45,7 @@ const AboutMe = () => {
             </button>
           </div>
         </div>
-        <img src='../src/assets/Images/personal1.jpg ' className='object-scale-down h-80 w-96 sm:mx-auto' ></img>
+        <img src={me} className='object-scale-down h-80 w-96 sm:mx-auto' ></img>
       </div>
       <div className=" items-start md:flex ">
         <p className="text-sm text-left tracking-tight font-serif font-Lora mt-2 mb-10">
