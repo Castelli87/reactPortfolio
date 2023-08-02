@@ -20,7 +20,7 @@ const Header = ({theme,setTheme}) => {
   return (
     <header className="flex justify-between  p-4 ">
       <a href="/" className="">
-        {theme === 'dark'?(<img className="w-16" src = {logoDark }alt="" />):(<img className="w-16" src={logoLight} alt="" />)}
+        {theme === 'dark'?(<img className="w-16" src = {logoLight }alt="" />):(<img className="w-16" src={logoDark} alt="" />)}
 
       </a>
       <nav className="hidden md:block " >
