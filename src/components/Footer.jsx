@@ -22,16 +22,16 @@ const Footer = () => {
 
       <div className="flex justify-center mt-7">
         <a href="https://github.com/Castelli87">
-          <FiGithub className="ml-5 text-2xl text-gray-500 hover:text-indigo-700" />
+          <FiGithub className="ml-5 text-2xl text-gray-500 hover:text-blue-500" />
         </a>
         <a href="https://www.linkedin.com/in/davidecastelli87/">
-          <FiLinkedin className="ml-5 text-2xl text-gray-500 hover:text-indigo-700" />
+          <FiLinkedin className="ml-5 text-2xl text-gray-500 hover:text-blue-500" />
         </a>
       </div>
       <div className="flex justify-center mt-8  ">
-        <FaRegCopyright className="text-md text-gray-600  " />
+        <FaRegCopyright className="text-md text-gray-500  " />
         <span className="text-sm ml-1">
-          2023 Davide Castelli. All right reserved.
+          2023 Davide Castelli. All rights reserved.
         </span>
       </div>
     </section>
