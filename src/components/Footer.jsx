@@ -31,7 +31,7 @@ const Footer = () => {
       <div className="flex justify-center mt-8  ">
         <FaRegCopyright className="text-md text-gray-500  " />
         <span className="text-sm ml-1">
-          2023 Davide Castelli. All right reserved.
+          2023 Davide Castelli. All rights reserved.
         </span>
       </div>
     </section>

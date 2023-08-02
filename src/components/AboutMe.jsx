@@ -43,8 +43,8 @@ const AboutMe = () => {
         </div>
         <img src='../src/assets/Images/personal1.jpg ' className='object-scale-down h-80 w-96 sm:mx-auto' ></img>
       </div>
-      <div className=" items-start md:flex  ">
-        <p className="text-sm text-left tracking-tight font-serif font-Lora mt-2">
+      <div className=" items-start md:flex ">
+        <p className="text-sm text-left tracking-tight font-serif font-Lora mt-2 mb-10">
           If you have any inquiries or would like to discuss potential
           opportunities, please feel free to reach out to me through the contact
           information provided below. I'm excited to connect with like-minded
@@ -54,7 +54,7 @@ const AboutMe = () => {
           <a href="/#Contact">Contact</a>
         </button>
       </div>
-      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      <hr className="h-px my-12 bg-gray-200 border-0 dark:bg-gray-700"></hr>
     </section>
   );
 };
