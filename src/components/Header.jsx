@@ -19,7 +19,7 @@ const Header = ({theme,setTheme}) => {
   return (
     <header className="flex justify-between  p-4 ">
       <a href="/" className="">
-        {theme === 'dark'?(<img className="w-16" src = {logoLight }alt="" />):(<img className="w-16" src="../src/assets/Images/Logo2.svg" alt="" />)}
+        {theme === 'dark'?(<img className="w-16" src = {logoLight }alt="" />):(<img className="w-16" src={logoLight} alt="" />)}
 
       </a>
       <nav className="hidden md:block " >
