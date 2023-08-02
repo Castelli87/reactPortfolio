@@ -12,7 +12,7 @@ function App() {
   const [theme, setTheme] = useState('light');
 
   return (
-    <main className='p-6 dark:bg-slate-800 dark:text-white' >
+    <main className=' dark:bg-slate-800 dark:text-white' >
       <Header theme={theme} setTheme={setTheme}/>
       <Home/>
       <AboutMe/>
