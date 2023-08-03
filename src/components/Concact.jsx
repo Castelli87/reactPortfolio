@@ -18,17 +18,17 @@ const encode = (data) => {
 }
 
 const handleSubmit=(event)=>{
-  event.preventDefault();
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encode({ "form-name": "contact",inputValues.fullname,inputValues.email,inputValues.subject,inputValues.message }),
+    body: encode({ "form-name": "contact",inputValues}),
   }).then(() => {
-      setInputValues(initialValues)
-    }).then(() => {
-      alert("Message Sent!")
-      console.log(inputValues)
-    }).catch((error) => alert(error));
+    setInputValues(initialValues)
+  }).then(() => {
+    alert("Message Sent!")
+    console.log(inputValues)
+  }).catch((error) => alert(error));
+  event.preventDefault();
 }
 
   const  handleChange = (event) =>{
