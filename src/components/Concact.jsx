@@ -30,18 +30,16 @@ export default function Concacts() {
       }),
     })
     .then(() => {
+      alert("Message Sent!");
+      setFullname("");
       setEmail("");
       setMessage("");
-      setFullname("");
       setSubject("");
-    })
-    .then(() => {
-      alert("Message Sent!");
-    })
-    .catch((error) => console.log(error));
+    }).catch((error) => console.log(error));
   }
 
-  return (
+    
+    return (
     <div>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <section className="container grid md:grid-cols-2 gap-10  " id="Contact">
@@ -60,6 +58,7 @@ export default function Concacts() {
               type="text"
               id="fullname"
               name="fullname"
+              value={fullname}
               onChange={(event) => setFullname(event.target.value)}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               required
@@ -77,6 +76,7 @@ export default function Concacts() {
               name="email"
               type="email"
               id="email"
+              value={email}
               onChange={(event) => setEmail(event.target.value)}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-200 focus:border-blue-200 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="name@flowbite.com"
@@ -94,6 +94,7 @@ export default function Concacts() {
               type="text"
               id="subject"
               name="subject"
+              value={subject}
               onChange={(event) => setSubject(event.target.value)}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               required
@@ -110,6 +111,7 @@ export default function Concacts() {
             <textarea
               id="message"
               name="message"
+              value={message}
               onChange={(event) => setMessage(event.target.value)}
               rows="4"
               className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500"
