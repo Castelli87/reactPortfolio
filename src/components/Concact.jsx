@@ -22,16 +22,13 @@ const handleSubmit=(event)=>{
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encode({ "form-name": "contact", inputValues }),
-  })
-    .then(() => {
+    body: encode({ "form-name": "contact", ...inputValues }),
+  }).then(() => {
       setInputValues(initialValues)
-    })
-    .then(() => {
+    }).then(() => {
       alert("Message Sent!")
       console.log(inputValues)
-    })
-    .catch((error) => alert(error));
+    }).catch((error) => alert(error));
 }
 
   const  handleChange = (event) =>{
