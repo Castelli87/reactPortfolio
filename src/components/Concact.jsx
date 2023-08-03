@@ -29,6 +29,7 @@ const handleSubmit=(event)=>{
     })
     .then(() => {
       alert("Message Sent!")
+      console.log(inputValues)
     })
     .catch((error) => alert(error));
 }
@@ -46,7 +47,7 @@ const handleSubmit=(event)=>{
     
     <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" ></hr>
     <section className="container grid md:grid-cols-2 gap-10  " id="Contact">
-      <form className="form  " name="contact" method="post" data-netlify="true" onSubmit={handleSubmit} >
+      <form className="form  " name="contact" method="post"  netlify onSubmit={handleSubmit} >
       <input type="hidden" name="form-name" value="contact" />
 
         <h2 className="font-general-medium text-2xl  mt-12 mb-8">
