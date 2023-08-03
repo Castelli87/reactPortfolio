@@ -11,11 +11,28 @@ const Concacts = () => {
 
 const [inputValues,setInputValues]= useState(initialValues)
 
-const handleSubmit=(event)=>{
-  event.preventDefault()
-  console.log(inputValues)
-  setInputValues(initialValues)
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
 }
+
+const handleSubmit=(event)=>{
+  event.preventDefault();
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode({ "form-name": "contact", ... inputValues }),
+  })
+    .then(() => {
+      setInputValues(initialValues)
+    })
+    .then(() => {
+      alert("Message Sent!")
+    })
+    .catch((error) => alert(error));
+}
+
   const  handleChange = (event) =>{
     const{name,value}=event.target
     setInputValues({...inputValues,[name]:value})
