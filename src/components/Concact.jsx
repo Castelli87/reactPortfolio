@@ -1,7 +1,8 @@
+import React from "react";
 import { useState } from "react";
 import { FiPhone, FiMapPin, FiMail } from "react-icons/fi";
 
-export default function Concacts ()  {
+export default function Concacts() {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -16,7 +17,6 @@ export default function Concacts ()  {
   };
 
   function handleSubmit(event) {
-    event.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -28,18 +28,19 @@ export default function Concacts ()  {
         subject,
       }),
     })
-      .then(() => {
-        setEmail("");
-        setMessage("");
-        setFullname("");
-        setSubject("");
-      })
-      .then(() => {
-        alert("Message Sent!");
-      })
-      .catch((error) => alert(error));
+    .then(() => {
+      setEmail("");
+      setMessage("");
+      setFullname("");
+      setSubject("");
+    })
+    .then(() => {
+      alert("Message Sent!");
+    })
+    .catch((error) => console.log(error));
+    event.preventDefault();
   }
-
+console.log(email,fullname,message,subject)
   return (
     <div>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
@@ -156,6 +157,4 @@ export default function Concacts ()  {
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
     </div>
   );
-};
-
-
+}
