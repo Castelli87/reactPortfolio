@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiPhone, FiMapPin, FiMail } from "react-icons/fi";
 
-const Concacts = () => {
+export default function Concacts ()  {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -158,4 +158,4 @@ const Concacts = () => {
   );
 };
 
-export default Concacts;
+
