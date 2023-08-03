@@ -17,6 +17,7 @@ export default function Concacts() {
   };
 
   function handleSubmit(event) {
+    event.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -38,9 +39,8 @@ export default function Concacts() {
       alert("Message Sent!");
     })
     .catch((error) => console.log(error));
-    event.preventDefault();
   }
-console.log(email,fullname,message,subject)
+
   return (
     <div>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
