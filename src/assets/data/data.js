@@ -10,6 +10,9 @@
     title: "Rent a CamperVan",
     type: "Full Stack",
     category: "Mobile Application",
+    desc : "Welcome to the Campervan App! This mobile application, built with MongoDB, React Native, Express, Node and Expo. Following Test Driven Development we used Jest and SuperTest. The app is designed to either find your perfect campervan for your trip or rent your campervan while your not using it."
+
+    ,
     img: van,
     TechStack: [
       "MongoDB",
