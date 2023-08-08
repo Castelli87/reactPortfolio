@@ -40,9 +40,9 @@ export default function Concacts() {
 
     
     return (
-    <div>
+    <div className="px-10">
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-      <section className="container grid md:grid-cols-2 gap-10  " id="Contact">
+      <section className=" grid md:grid-cols-2 gap-10  " id="Contact">
         <form className="form" name="contact" netlify  onSubmit={handleSubmit}>
           <h2 className="font-general-medium text-2xl  mt-12 mb-8">
             Contact Form

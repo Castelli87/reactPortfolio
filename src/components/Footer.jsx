@@ -12,7 +12,7 @@ const Footer = () => {
 
 
   return (
-    <section>
+    <section className="px-10" >
       <div className="flex justify-end">
         <button onClick={scrollToTop}className="flex md:m-3 md:text-left bg-blue-500  hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ">
           <FiArrowUp className=" text-3xl" />

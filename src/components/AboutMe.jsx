@@ -4,7 +4,7 @@ import me from '../assets/Images/personal1.jpg'
 
 const AboutMe = () => {
   return (
-    <section className="container mx-auto " id="About">
+    <section className="mx-auto px-10 " id="About">
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <div className="grid lg:grid-cols-2 items-center ">
         <div className=" ">
