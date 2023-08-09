@@ -30,7 +30,7 @@ const projects = [
     type: "Front End",
     category: "Web Application",
     img: news,
-    live: "https://front-end-nc-news.netlify.app/",
+    live: "https://beautiful-profiterole-ff85b4.netlify.app",
     code: "https://github.com/Castelli87/nc-news",
     desc: "The NC-news Front-End project is an engaging news portal that seamlessly interacts with the NC-news API backend. Built using the React framework and styled with CSS, this user-centric application delivers an intuitive and visually appealing experience for news enthusiasts. The NC-news Front-End project combines the power of React and CSS to create an immersive news portal that seamlessly connects with the NC-news API. Offering a visually appealing, user-friendly, and responsive interface, this front-end solution complements the robustness of the backend, providing a complete and compelling news consumption platform.",
     TechStack: ["React", "CSS3"],
