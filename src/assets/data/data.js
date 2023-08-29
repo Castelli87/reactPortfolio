@@ -1,7 +1,8 @@
 import van from "../Images/RentCamperVan1.png";
 import api from "../Images/BE_NcNews1.png";
 import news from "../Images/FE_NcNews3.png";
-import van2 from "../Images/RentCamperVan2.png";
+import artMoment from "../Images/ArtMoment.png";
+import recipes from "../Images/recipesBook.png"
 
 const projects = [
   {
@@ -14,7 +15,7 @@ const projects = [
     img: van,
     live: "https://www.youtube.com/watch?v=EBsC1bUbI20",
     code: "https://github.com/779carney/camper-van-app",
-    
+
     TechStack: [
       "MongoDB",
       "Mongoose",
@@ -43,10 +44,32 @@ const projects = [
     img: api,
     live: "https://nc-news-iila.onrender.com/api",
     code: "https://github.com/Castelli87/be-nc-news",
-    desc:'The NC-news API is a cutting-edge RESTful web service crafted with Node.js and Express.js, backed by PostgreSQL. It enables efficient Create, Read, Update, and Delete (CRUD) operations on a comprehensive collection of news articles, following a Test-Driven Development (TDD) approach using Jest.js. The NC-news API offers a solid foundation for crafting news-centric applications, delivering a seamless user experience with its secure, scalable, and developer-friendly architecture.',
+    desc: "The NC-news API is a cutting-edge RESTful web service crafted with Node.js and Express.js, backed by PostgreSQL. It enables efficient Create, Read, Update, and Delete (CRUD) operations on a comprehensive collection of news articles, following a Test-Driven Development (TDD) approach using Jest.js. The NC-news API offers a solid foundation for crafting news-centric applications, delivering a seamless user experience with its secure, scalable, and developer-friendly architecture.",
     TechStack: ["Node.js", "Express.js", "Jest.js", "PostgresSQL"],
   },
-
+  {
+    id: 4,
+    title: "ArtMoment",
+    type: "Front End",
+    category: "Landing Page",
+    img: artMoment,
+    live: "https://castelli87.github.io/ArtMomentproject/#home",
+    code: "https://github.com/Castelli87/ArtMomentproject",
+    desc: " the ArtMoment Landing Page project. In this endeavor, aimed to capture the essence of creativity, design, and user engagement by crafting a captivating digital space for an imaginary event called ArtMoment.",
+    TechStack: ["Bootstrap_5", "HTML"],
+  },
+  {
+    id: 5,
+    title: "Recipes Book",
+    type: "Full Stack",
+    category: "Web Application",
+    img: recipes,
+    live: "#",
+    code: "https://github.com/Castelli87/recipes-onlinee-php",
+    desc:"WORK IN PROGRESS, check the code on the git-hub repo ",
+    /* desc: "Embark on a flavorful adventure through the digital pages of my Culinary Journey Recipe Book – a web project meticulously crafted using PHP, Bootstrap-5, and MySQL. This endeavor serves as a testament to my dedication to mastering PHP and its applications, offering a dynamic platform to consolidate my learning journey.More info into the README.md that you can found on my Git Hub", */
+    TechStack: ["PHP","Bootstrap_5","MySQL"],
+  },
 ];
 
 export default projects;
