@@ -1,6 +1,0 @@
-[[redirects]]
-
-  from = "https://davidecastelli.netlify.app/"
-  to = "https://davidecastelli.tech/"
-  status = 301
-  force = false
