@@ -49,7 +49,7 @@ const Header = ({theme,setTheme}) => {
             <a onClick={handleToggle}  href="/#Projects" className="p-2 m-2 text-gray-600	text-sm font-semibold	font-sans hover:text-black hover:underline dark:bg-slate-800 dark:text-white">Projects</a>
           </li>
           <li>
-            <a onClick={handleToggle}  href="/#Contact" className="p-2 m-2 text-gray-600	text-sm font-semibold	font-sans hover:text-black hover:underline dark:bg-slate-800 dark:text-white">Contact</a>
+            <a onClick={handleToggle}  href="/#Contact" className="p-2 m-2 text-gray-600	text-sm font-semibold	font-sans hover:text-black hover:underline dark:bg-slate-800 dark:text-white">Contactsss</a>
           </li>
           <li>
             <button  onClick={onChange} className="p-2 m-2 text-lg font-semibold	font-sans text-gray-600 focus:outline-none bg-white rounded  hover:bg-gray-100 hover:text-black focus:z-10  focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-slate-800 dark:text-white dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" >{theme === 'light' ?(<FiSun/>):(<FiMoon/>)}</button>

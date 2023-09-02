@@ -8,6 +8,17 @@ export default function Concacts() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  // const [errorName, setErrorName] = useState(false);
+  // const [errorEmail, setErrorEmail] = useState(false);
+  // const [errorSubject, setErrorSubject] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
+
+  const [formSubmitted,setFormSubmitted]= useState(false)
+
+  const [msg, setMsg] = useState(
+    "Message sintax not valid please re enter the field "
+  );
+
   const encode = (data) => {
     return Object.keys(data)
       .map(
@@ -18,32 +29,50 @@ export default function Concacts() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "contact",
-        fullname,
-        email,
-        message,
-        subject,
-      }),
-    })
-    .then(() => {
-      alert("Message Sent!");
-      setFullname("");
-      setEmail("");
-      setMessage("");
-      setSubject("");
-    }).catch((error) => console.log(error));
+
+    if (message.length === 0 || message.trim() === "") {
+      setErrorMessage(true);
+    // } else if (fullname.trim() === "") {
+    //   setErrorName(true);
+    // } else if (subject.trim() === "") {
+    //   setErrorSubject(true);
+    // } 
+    }else {
+      setFormSubmitted(true)
+      // setError(false);
+      setErrorMessage(false)
+      // setErrorEmail(false)
+      // setErrorName(false)
+      // setErrorSubject(false)
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "contact",
+          fullname,
+          email,
+          message,
+          subject,
+        }),
+      })
+        .then(() => {
+          alert("Message Sent!");
+          setFullname("");
+          setEmail("");
+          setMessage("");
+          setSubject("");
+        })
+        .catch((error) => console.log(error));
+      }
+      setTimeout(()=>{setFormSubmitted(false)},4000)
   }
 
-    
-    return (
+  return (
     <div className="px-10">
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <section className=" grid md:grid-cols-2 gap-10  " id="Contact">
-        <form className="form" name="contact" netlify  onSubmit={handleSubmit}>
+        <form className="form" name="contact" netlify onSubmit={handleSubmit}>
           <h2 className="font-general-medium text-2xl  mt-12 mb-8">
             Contact Form
           </h2>
@@ -64,6 +93,7 @@ export default function Concacts() {
               required
               placeholder="Your Name"
             ></input>
+            {/* {errorName ? <p>{msg}</p> : <p></p>} */}
           </div>
           <div className="mb-6">
             <label
@@ -82,6 +112,7 @@ export default function Concacts() {
               placeholder="name@flowbite.com"
               required
             ></input>
+            {/* {errorEmail ? <p>{msg}</p> : <p></p>} */}
           </div>
           <div className="mb-6">
             <label
@@ -100,6 +131,7 @@ export default function Concacts() {
               required
               placeholder="Subject"
             ></input>
+            {/* {errorSubject ? <p>{msg}</p> : <p></p>} */}
           </div>
           <div className="mb-6">
             <label
@@ -117,6 +149,7 @@ export default function Concacts() {
               className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Please leave your message here.... "
             ></textarea>
+            {errorMessage ? <h2 className="  m-4 c text-red-900">{msg}</h2> : <p></p>}
           </div>
           <button
             type="submit"
@@ -124,6 +157,7 @@ export default function Concacts() {
           >
             Submit
           </button>
+          {formSubmitted ?<h3 className=" text-2xl text-blue-500">The form was succefull submitted,I reply as soon as possibile Thanks </h3> : <p></p>}
         </form>
 
         <section className="w-full lg:w-1/2 ">
