@@ -15,6 +15,8 @@ export default function Concacts() {
 
   const [formSubmitted,setFormSubmitted]= useState(false)
 
+  const handleToggle = () => setFormSubmitted(!formSubmitted);
+
   const [msg, setMsg] = useState(
     "Message sintax not valid please re enter the field "
   );
@@ -57,7 +59,7 @@ export default function Concacts() {
         }),
       })
         .then(() => {
-          alert("Message Sent!");
+         // alert("Message Sent!");
           setFullname("");
           setEmail("");
           setMessage("");
@@ -65,7 +67,7 @@ export default function Concacts() {
         })
         .catch((error) => console.log(error));
       }
-      setTimeout(()=>{setFormSubmitted(false)},4000)
+     // setTimeout(()=>{setFormSubmitted(false)},4000)
   }
 
   return (
@@ -149,15 +151,16 @@ export default function Concacts() {
               className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Please leave your message here.... "
             ></textarea>
-            {errorMessage ? <h2 className="  m-4 c text-red-900">{msg}</h2> : <p></p>}
+            {errorMessage ? <div className=" mt-3 rounded-2xl border-solid  border-2 border-red-500 flex gap-2"><h2 className="  m-4 c text-xl text-red-500">{msg}</h2> </div>: <p></p>}
           </div>
+          {formSubmitted ?<div className=" p-4 rounded-2xl border-solid  border-2 border-blue-500 flex gap-2">
+            <h3 className=" text-2xl">The form was succefull submitted,I reply as soon as possibile Thanks </h3><span onClick={handleToggle} className="text-2xl cursor-pointer" >X</span></div>: <p></p>}
           <button
             type="submit"
-            className="flex my-3 md:m-3 md:text-left bg-blue-500  hover:bg-blue-700 text-white font-bold py-1 px-4 rounded"
+            className="flex my-3 md: md:text-left bg-blue-500  hover:bg-blue-700 text-white font-bold py-1 px-4 rounded"
           >
             Submit
           </button>
-          {formSubmitted ?<h3 className=" text-2xl text-blue-500">The form was succefull submitted,I reply as soon as possibile Thanks </h3> : <p></p>}
         </form>
 
         <section className="w-full lg:w-1/2 ">
