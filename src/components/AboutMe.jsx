@@ -11,7 +11,7 @@ const AboutMe = () => {
           <h1 className="text-3xl font-bold mb-6 text-left">About</h1>
           <p className="text-sm text-left tracking-tight font-serif font-Lora mt-2">Hello! I'm Davide, </p>
           <p className="text-sm text-left tracking-tight font-serif font-Lora">
-            a junior full stack developer with a passion for building dynamic
+            a full stack developer with a passion for building dynamic
             and user-centric applications.
           </p>
 
@@ -20,7 +20,7 @@ const AboutMe = () => {
             stack, I strive to create seamless experiences for users while
             constantly expanding my knowledge. In my journey as a developer, I
             have gained experience working with technologies such as Express,
-            PostgreSQL, MongoDB, Jest, React, and React Native.
+            PostgreSQL, PHP, MongoDB, Jest, React, and React Native.
           </p>
           <p className="text-sm text-left tracking-tight font-serif mt-2 font-Lora">
             Leveraging these tools,

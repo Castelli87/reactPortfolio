@@ -13,12 +13,14 @@ export default function Concacts() {
   // const [errorSubject, setErrorSubject] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
 
-  const [formSubmitted,setFormSubmitted]= useState(false)
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleToggle = () => setFormSubmitted(!formSubmitted);
 
   const [msg, setMsg] = useState(
-    "Message sintax not valid please re enter the field "
+    `Please make sure you enter valid information.
+    The field should contain characters, not just white spaces.
+    Please correct your entry and try again.`
   );
 
   const encode = (data) => {
@@ -34,18 +36,11 @@ export default function Concacts() {
 
     if (message.length === 0 || message.trim() === "") {
       setErrorMessage(true);
-    // } else if (fullname.trim() === "") {
-    //   setErrorName(true);
-    // } else if (subject.trim() === "") {
-    //   setErrorSubject(true);
-    // } 
-    }else {
-      setFormSubmitted(true)
-      // setError(false);
-      setErrorMessage(false)
-      // setErrorEmail(false)
-      // setErrorName(false)
-      // setErrorSubject(false)
+ 
+    } else {
+      setFormSubmitted(true);
+      setErrorMessage(false);
+
 
       fetch("/", {
         method: "POST",
@@ -59,15 +54,13 @@ export default function Concacts() {
         }),
       })
         .then(() => {
-         // alert("Message Sent!");
           setFullname("");
           setEmail("");
           setMessage("");
           setSubject("");
         })
         .catch((error) => console.log(error));
-      }
-     // setTimeout(()=>{setFormSubmitted(false)},4000)
+    }
   }
 
   return (
@@ -95,7 +88,6 @@ export default function Concacts() {
               required
               placeholder="Your Name"
             ></input>
-            {/* {errorName ? <p>{msg}</p> : <p></p>} */}
           </div>
           <div className="mb-6">
             <label
@@ -114,7 +106,6 @@ export default function Concacts() {
               placeholder="name@flowbite.com"
               required
             ></input>
-            {/* {errorEmail ? <p>{msg}</p> : <p></p>} */}
           </div>
           <div className="mb-6">
             <label
@@ -133,7 +124,6 @@ export default function Concacts() {
               required
               placeholder="Subject"
             ></input>
-            {/* {errorSubject ? <p>{msg}</p> : <p></p>} */}
           </div>
           <div className="mb-6">
             <label
@@ -151,10 +141,28 @@ export default function Concacts() {
               className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Please leave your message here.... "
             ></textarea>
-            {errorMessage ? <div className=" mt-3 rounded-2xl border-solid  border-2 border-red-500 flex gap-2"><h2 className="  m-4 c text-xl text-red-500">{msg}</h2> </div>: <p></p>}
+            {errorMessage ? (
+              <div className=" mt-3 rounded-2xl border-solid  border-2 border-red-500 flex gap-2">
+                <h2 className="  m-4 c text-xl text-red-500">{msg}</h2>{" "}
+              </div>
+            ) : (
+              <p></p>
+            )}
           </div>
-          {formSubmitted ?<div className=" p-4 rounded-2xl border-solid  border-2 border-blue-500 flex gap-2">
-            <h3 className=" text-2xl">The form was succefull submitted,I reply as soon as possibile Thanks </h3><span onClick={handleToggle} className="text-2xl cursor-pointer" >X</span></div>: <p></p>}
+          {formSubmitted ? (
+            <div className=" mt-3 p-2  rounded-xl border-solid  border-2 border-blue-500 flex justify-between">
+              <h3 className=" text-xl ">
+                Thank you for submitting your form! Your information has been
+                received successfully. We'll get back to you as soon as
+                possible.{" "}
+              </h3>
+              <span onClick={handleToggle} className="text-2xl cursor-pointer">
+                X
+              </span>
+            </div>
+          ) : (
+            <p></p>
+          )}
           <button
             type="submit"
             className="flex my-3 md: md:text-left bg-blue-500  hover:bg-blue-700 text-white font-bold py-1 px-4 rounded"

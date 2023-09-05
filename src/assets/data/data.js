@@ -64,10 +64,10 @@ const projects = [
     type: "Full Stack",
     category: "Web Application",
     img: recipes,
-    live: "#",
+    live: "http://recipes.infinityfreeapp.com/home.php",
     code: "https://github.com/Castelli87/recipes-onlinee-php",
     desc:"WORK IN PROGRESS, check the code on the git-hub repo ",
-    /* desc: "Embark on a flavorful adventure through the digital pages of my Culinary Journey Recipe Book – a web project meticulously crafted using PHP, Bootstrap-5, and MySQL. This endeavor serves as a testament to my dedication to mastering PHP and its applications, offering a dynamic platform to consolidate my learning journey.More info into the README.md that you can found on my Git Hub", */
+     desc: "Embark on a flavorful adventure through the digital pages of my Culinary Journey Recipe Book – a web project meticulously crafted using PHP, Bootstrap-5, and MySQL. This endeavor serves as a testament to my dedication to mastering PHP and its applications, offering a dynamic platform to consolidate my learning journey.More info into the README.md that you can found on my Git Hub",
     TechStack: ["PHP","Bootstrap_5","MySQL"],
   },
 ];
