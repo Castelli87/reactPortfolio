@@ -26,60 +26,55 @@ export default function Concacts() {
 
   const form = useRef();
 
-  // const encode = (data) => {
-  //   return Object.keys(data)
-  //     .map(
-  //       (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-  //     )
-  //     .join("&");
-  // };
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
 
   function handleSubmit(event) {
     event.preventDefault();
 
     if (message.length === 0 || message.trim() === "") {
       setErrorMessage(true);
+ 
     } else {
       setFormSubmitted(true);
       setErrorMessage(false);
 
-      emailjs
-        .send(
-          "default_service",
-          "Contact_template",
-          form.current,
-          "9aqS3rPNZD1N1kHb6"
-        )
-        .then(
-          function (response) {
-            console.log("SUCCESS!", response.status, response.text);
-          },
-          function (error) {
-            console.log("FAILED...", error);
-          }
-        )
-        .then(() => {
-          setFullname("");
-          setEmail("");
-          setMessage("");
-          setSubject("");
-        })
-        .catch((error) => console.log(error));
+      
+      
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "contact",
+          fullname,
+          email,
+          message,
+          subject,
+        }),
+      })
+      .then(() => {
+        setFullname("");
+        setEmail("");
+        setMessage("");
+        setSubject("");
+      })
+      .catch((error) => console.log(error));
     }
 
-    // fetch("/", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: encode({
-    //     "form-name": "contact",
-    //     fullname,
-    //     email,
-    //     message,
-    //     subject,
-    //   }),
-    // })
+    emailjs.send("service_db6fbsm", "Contact_template", form.current, "9aqS3rPNZD1N1kHb6")
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
   }
-
+  
+  
   return (
     <div className="px-10">
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
