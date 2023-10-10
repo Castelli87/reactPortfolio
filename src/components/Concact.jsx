@@ -66,7 +66,7 @@ export default function Concacts() {
       .catch((error) => console.log(error));
     }
 
-    emailjs.sendForm("service_db6fbsm", "template_2jwn0q9", form.current, "9aqS3rPNZD1N1kHb6")
+    emailjs.sendForm("service_db6fbsm", "template_hz2c7ji", form.current, "9aqS3rPNZD1N1kHb6")
     .then((result) => {
       console.log(result.text);
   }, (error) => {
