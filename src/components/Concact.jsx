@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useState } from "react";
 import { FiPhone, FiMapPin, FiMail } from "react-icons/fi";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 export default function Concacts() {
   const [fullname, setFullname] = useState("");
@@ -24,45 +24,40 @@ export default function Concacts() {
     Please correct your entry and try again.`
   );
 
-  const form = useRef;
+  const form = useRef();
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
+  // const encode = (data) => {
+  //   return Object.keys(data)
+  //     .map(
+  //       (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+  //     )
+  //     .join("&");
+  // };
 
   function handleSubmit(event) {
     event.preventDefault();
 
     if (message.length === 0 || message.trim() === "") {
       setErrorMessage(true);
- 
     } else {
       setFormSubmitted(true);
       setErrorMessage(false);
 
-      emailjs.send("default_service", "Contact_template", form.current, "9aqS3rPNZD1N1kHb6")
-      .then(function(response) {
-         console.log('SUCCESS!', response.status, response.text);
-      }, function(error) {
-         console.log('FAILED...', error);
-      });
-
-
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "contact",
-          fullname,
-          email,
-          message,
-          subject,
-        }),
-      })
+      emailjs
+        .send(
+          "default_service",
+          "Contact_template",
+          form.current,
+          "9aqS3rPNZD1N1kHb6"
+        )
+        .then(
+          function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        )
         .then(() => {
           setFullname("");
           setEmail("");
@@ -71,13 +66,31 @@ export default function Concacts() {
         })
         .catch((error) => console.log(error));
     }
+
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: encode({
+    //     "form-name": "contact",
+    //     fullname,
+    //     email,
+    //     message,
+    //     subject,
+    //   }),
+    // })
   }
 
   return (
     <div className="px-10">
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <section className=" grid md:grid-cols-2 gap-10  " id="Contact">
-        <form className="form" name="contact" netlify ref={form} onSubmit={handleSubmit}>
+        <form
+          className="form"
+          name="contact"
+          netlify
+          ref={form}
+          onSubmit={handleSubmit}
+        >
           <h2 className="font-general-medium text-2xl  mt-12 mb-8">
             Contact Form
           </h2>
