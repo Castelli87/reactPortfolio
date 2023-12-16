@@ -24,3 +24,5 @@ creare la singola card                X
 creare i layout per le card 
 
 PRova
+
+altra prova 
