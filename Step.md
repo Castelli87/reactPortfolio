@@ -22,3 +22,5 @@ DECISIONE DA PRENDERE UTILIZZARE REACT ROUTERS ??  GUARDARE HOOK CONCTEX
 allora inserire le imagini nei data , X
 creare la singola card                X
 creare i layout per le card 
+
+PRova
